@@ -37,7 +37,7 @@ public class demoUI {
 			}
 			else {
 				if(thisFlight.getFreeEconomySeats()>=numberPassengers) {
-					thisFlight.reserveEconomyClass();
+					thisFlight.reserveEconomyClass(numberPassengers);
 					Ticket newTicket= new Ticket("Mr random", thisFlight.getRoute(), 5000*numberPassengers, numberPassengers, thisFlight.getDepart(), thisFlight.getArrive(), false);
 					tickets.add(newTicket);
 				}
