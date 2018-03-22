@@ -5,6 +5,10 @@ import java.util.Date;
 import java.util.List;
 import java.util.Scanner;
 
+import se.lexicon.ui.ui;
+
+
+
 // the class Airline creates our great Airline company
 // it has a main Office where the big decisions are taken,  a customerService (UI) to take orders, and a food service
 // we have three planes
@@ -32,7 +36,7 @@ public class Airline {
 		flights.addAll(ScheduleFlights(airplane3));
 
 		// time for the customer service to do they're jobb
-		demoUI ui = new demoUI();
+		ui UI = new ui();
 		List<Ticket> tickets = ui.start(flights);
 		
 		// counting money is the best part of a good business
