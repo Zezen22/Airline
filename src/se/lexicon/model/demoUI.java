@@ -28,7 +28,7 @@ public class demoUI {
 		
 			if(isBusiness) {
 				if(thisFlight.getFreeBusinessSeats()>=numberPassengers) {
-					thisFlight.reserveBusinessClass();
+					thisFlight.reserveBusinessClass(numberPassengers);
 					Ticket newTicket= new Ticket("Mr random", thisFlight.getRoute(), 20000*numberPassengers, numberPassengers, thisFlight.getDepart(), thisFlight.getArrive(), true);
 					tickets.add(newTicket);
 				}

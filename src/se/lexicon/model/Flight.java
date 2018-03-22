@@ -14,6 +14,7 @@ public class Flight {
 	private boolean flightIsCompleate, noBusinessClassPlacesLeft, noEconomyClassplacesLeft;
 	
 	
+	
 	// constructor
 	public Flight(int flightNumber, Airplane airplane, Date depart, Date arrive, String route) {
 		this.flightNumber = flightNumber;
@@ -28,9 +29,9 @@ public class Flight {
 	
 	
 	// reserve a Seat
-	public void reserveBusinessClass() {
-		freeSeats--;
-		freeBusinessSeats--;
+	public void reserveBusinessClass(int num) {
+		freeSeats= freeSeats-num;;
+		freeBusinessSeats= freeBusinessSeats-num;
 		if(freeSeats== 0) {
 			flightIsCompleate = true;
 //			System.out.println("flight nb "+ flightNumber + " in "+ airplane.getName() +" is complete");
@@ -41,9 +42,9 @@ public class Flight {
 		}
 	}
 	
-	public void reserveEconomyClass() {
-		freeSeats--;
-		freeEconomySeats--;
+	public void reserveEconomyClass(int num) {
+		freeSeats= freeSeats-num;
+		freeEconomySeats = freeEconomySeats-num;
 		if(freeSeats== 0) {
 			flightIsCompleate = true;
 //			System.out.println("flight nb "+ flightNumber + " in "+ airplane.getName() +" is complete");

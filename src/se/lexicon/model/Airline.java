@@ -55,7 +55,7 @@ public class Airline {
 
 		
 		try {
-			Thread.sleep(60000*20);
+			Thread.sleep(60000*15);
 		} catch (InterruptedException e1) {
 			// TODO Auto-generated catch block
 			e1.printStackTrace();
@@ -91,14 +91,14 @@ public class Airline {
 		Scanner in = new Scanner(System.in);
 
 		long t = new Date().getTime();
-		System.out.println("choose next route för our plane " + airplane.getName());
+		System.out.println("choose four routes route för our plane " + airplane.getName());
 		for (int i = 0; i < options.length; i++)
 			System.out.println((i + 1) + " " + options[i]);
 		for (int i = 0; i < 4; i++) {
+			System.out.println("next trip?");
 			int num = in.nextInt() - 1;
 			flights.add(new Flight(i + 1, airplane, new Date(t + (2 + 3 * i) * ONE_MINUTE_IN_MILLIS),
-					new Date(t + (4 + 3 * i) * ONE_MINUTE_IN_MILLIS), options[num].toString()));
-			System.out.println("next trip?");
+					new Date(t + (4 + 3 * i) * ONE_MINUTE_IN_MILLIS), options[num].toString()));			
 		}
 		return flights;
 	}
