@@ -2,8 +2,6 @@ package se.lexicon.model;
 
 import java.util.Scanner;
 
-import com.sun.org.apache.xerces.internal.util.SynchronizedSymbolTable;
-
 public class FoodService {
 	
 //	Flight flight;

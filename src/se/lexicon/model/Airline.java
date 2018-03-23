@@ -5,7 +5,7 @@ import java.util.Date;
 import java.util.List;
 import java.util.Scanner;
 
-import se.lexicon.ui.ui;
+import se.lexicon.ui.UI;
 
 
 
@@ -36,7 +36,7 @@ public class Airline {
 		flights.addAll(ScheduleFlights(airplane3));
 
 		// time for the customer service to do they're jobb
-		ui UI = new ui();
+		UI ui = new UI();
 		List<Ticket> tickets = ui.start(flights);
 		
 		// counting money is the best part of a good business

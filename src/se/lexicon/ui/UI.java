@@ -10,10 +10,10 @@ import java.util.Scanner;
 import se.lexicon.model.Flight;
 import se.lexicon.model.Ticket;
 
-public class ui {
+public class UI {
 
 	// Return Number of Tickets
-	public static List<Ticket> start(List<Flight> flights) {
+	public List<Ticket> start(List<Flight> flights) {
 
 		List<Ticket> tickets = new ArrayList<Ticket>();
 
